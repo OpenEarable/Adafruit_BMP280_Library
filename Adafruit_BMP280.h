@@ -190,6 +190,7 @@ public:
   uint8_t sensorID(void);
 
   float readTemperature();
+  float getTemperature();
   float readPressure(void);
   float readAltitude(float seaLevelhPa = 1013.25);
   float seaLevelForAltitude(float altitude, float atmospheric);

@@ -306,6 +306,15 @@ float Adafruit_BMP280::readPressure() {
 }
 
 /*!
+* Returns the temperature from the last measurement.
+* @return The temperature in degrees celsius.
+*/
+float Adafruit_BMP280::getTemperature() {
+  float T = (t_fine * 5 + 128) >> 8;
+  return T / 100;
+}
+
+/*!
  * @brief Calculates the approximate altitude using barometric pressure and the
  * supplied sea level hPa as a reference.
  * @param seaLevelhPa
